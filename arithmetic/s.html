@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Skills - Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" crossorigin="anonymous">
+    <!-- KaTeX JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <style>
+        /* Custom styles to match the provided index.html's aesthetic */
+        body {
+            font-family: sans-serif; /* Matching the sans-serif from index.html */
+            line-height: 1.6;
+            padding-top: 60px; /* Matching index.html's body padding for fixed header */
+            background-color: #f4f4f4; /* Light background from index.html */
+            color: #333;
+        }
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* Scrubs green from index.html */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center;
+            padding: 20.5px 20px; /* Matching padding from index.html */
+            box-sizing: border-box;
+        }
+        .navbar-title-custom {
+            color: black; /* Changed to black as per index.html */
+            font-size: 24px; /* Explicitly set to match index.html's title font size */
+            font-weight: bold; /* Added for consistency with index.html's title */
+            text-decoration: none;
+            flex-grow: 1; /* Allows title to take available space */
+            text-align: center;
+            padding: 0; /* Crucial: No extra padding on the title link itself */
+        }
+        .navbar-icon-link {
+            color: black;
+            font-size: 24px; /* Explicitly set icon size to match title and index.html's visual height */
+            border-radius: 9999px; /* Tailwind's rounded-full equivalent for hover effect */
+            transition: background-color 0.3s ease;
+            display: flex; /* To properly center the icon if it has its own padding/margin */
+            align-items: center;
+            justify-content: center;
+            height: 40px; /* Approximate height of the icon area to match title height */
+            width: 40px; /* Make it square for better click/tap target */
+        }
+        .navbar-icon-link:hover {
+            background-color: rgba(28, 100, 50, 0.2); /* Hover effect matching hover:bg-green-700 hover:bg-opacity-20 */
+        }
+
+        /* KaTeX specific styling */
+        .katex-display > .katex {
+            display: block;
+            text-align: center;
+        }
+        .katex {
+            font-size: 1.1em; /* Slightly larger font for equations */
+        }
+
+        /* Responsive adjustments for navbar */
+        @media (max-width: 600px) {
+            .navbar-custom {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .navbar-title-custom {
+                margin-bottom: 10px;
+            }
+        }
+        .solution-step {
+            margin-bottom: 0.5em; /* Space between steps */
+        }
+        .final-answer {
+            font-size: 1.25em; /* Larger font for final answer */
+            font-weight: bold; /* Bold text for final answer */
+            color: #1a202c; /* Darker color for emphasis */
+            margin-top: 0.75em; /* Space above final answer */
+            text-align: left; /* Align with steps */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar-custom">
+        <a href="../index.html" class="navbar-icon-link" aria-label="Home" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <h1 class="navbar-title-custom">Arithmetic Skills - Solutions</h1>
+        <a href="q.html" class="navbar-icon-link" aria-label="Questions" title="Questions">
+            <i class="fas fa-book"></i>
+        </a>
+    </nav>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Instructions/Information Box -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Solutions to Arithmetic Skills Questions</h2>
+            <p class="text-gray-700">
+                Below are the step-by-step solutions to the arithmetic questions.
+            </p>
+        </section>
+
+        <!-- Solutions Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Solutions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Solutions to Pure Arithmetic Questions -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">1. $((22 \times 6) - 15) \div 3$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$22 \times 6 = 132$</p>
+                        <p class="solution-step">$132 - 15 = 117$</p>
+                        <p class="solution-step">$117 \div 3 = 39$</p>
+                        <p class="final-answer">Answer: $\textbf{39}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">2. $((512 - 128) \times 2) \div 64$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$512 - 128 = 384$</p>
+                        <p class="solution-step">$384 \times 2 = 768$</p>
+                        <p class="solution-step">$768 \div 64 = 12$</p>
+                        <p class="final-answer">Answer: $\textbf{12}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">3. $4500 \times 12$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$4500 \times 10 = 45000$</p>
+                        <p class="solution-step">$4500 \times 2 = 9000$</p>
+                        <p class="solution-step">$45000 + 9000 = 54000$</p>
+                        <p class="final-answer">Answer: $\textbf{54000}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">4. $11.5 \times 8.3$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$115 \times 83 = 9545$</p>
+                        <p class="solution-step">Adjust for decimals.</p>
+                        <p class="final-answer">Answer: $\textbf{95.45}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">5. $3640 \div 52$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$3640 \div 4 = 910$</p>
+                        <p class="solution-step">$52 \div 4 = 13$</p>
+                        <p class="solution-step">$910 \div 13 = 70$</p>
+                        <p class="final-answer">Answer: $\textbf{70}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">6. $14.7 \div 21$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$147 \div 21 = 7$</p>
+                        <p class="solution-step">Adjust for decimal.</p>
+                        <p class="final-answer">Answer: $\textbf{0.7}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">7. $((50 + 70) \times 3) - 100$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$50 + 70 = 120$</p>
+                        <p class="solution-step">$120 \times 3 = 360$</p>
+                        <p class="solution-step">$360 - 100 = 260$</p>
+                        <p class="final-answer">Answer: $\textbf{260}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">8. $((250 - 75) \div 5) + 15$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$250 - 75 = 175$</p>
+                        <p class="solution-step">$175 \div 5 = 35$</p>
+                        <p class="solution-step">$35 + 15 = 50$</p>
+                        <p class="final-answer">Answer: $\textbf{50}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">9. $78 \times 23$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$78 \times 20 = 1560$</p>
+                        <p class="solution-step">$78 \times 3 = 234$</p>
+                        <p class="solution-step">$1560 + 234 = 1794$</p>
+                        <p class="final-answer">Answer: $\textbf{1794}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">10. $15.8 \times 4.5$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$158 \times 45 = 7110$</p>
+                        <p class="solution-step">Adjust for decimals.</p>
+                        <p class="final-answer">Answer: $\textbf{71.10}$ or $\textbf{71.1}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">11. $4800 \div 16$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$48 \div 16 = 3$</p>
+                        <p class="solution-step">Add zeros back.</p>
+                        <p class="final-answer">Answer: $\textbf{300}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">12. $28.8 \div 12$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$288 \div 12 = 24$</p>
+                        <p class="solution-step">Adjust for decimal.</p>
+                        <p class="final-answer">Answer: $\textbf{2.4}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">13. $((120 \div 4) + 15) \times 2$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$120 \div 4 = 30$</p>
+                        <p class="solution-step">$30 + 15 = 45$</p>
+                        <p class="solution-step">$45 \times 2 = 90$</p>
+                        <p class="final-answer">Answer: $\textbf{90}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">14. $((9.6 + 2.4) \times 5) - 10$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$9.6 + 2.4 = 12.0$</p>
+                        <p class="solution-step">$12 \times 5 = 60$</p>
+                        <p class="solution-step">$60 - 10 = 50$</p>
+                        <p class="final-answer">Answer: $\textbf{50}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">15. $675 \div 25$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$600 \div 25 = 24$</p>
+                        <p class="solution-step">$75 \div 25 = 3$</p>
+                        <p class="solution-step">$24 + 3 = 27$</p>
+                        <p class="final-answer">Answer: $\textbf{27}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">16. $3.5 \times 18$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$3.5 \times 10 = 35$</p>
+                        <p class="solution-step">$3.5 \times 8 = 28$</p>
+                        <p class="solution-step">$35 + 28 = 63$</p>
+                        <p class="final-answer">Answer: $\textbf{63}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">17. $((720 - 180) \div 9) + 40$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$720 - 180 = 540$</p>
+                        <p class="solution-step">$540 \div 9 = 60$</p>
+                        <p class="solution-step">$60 + 40 = 100$</p>
+                        <p class="final-answer">Answer: $\textbf{100}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">18. $((15 \times 8) + 20) \div 7$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$15 \times 8 = 120$</p>
+                        <p class="solution-step">$120 + 20 = 140$</p>
+                        <p class="solution-step">$140 \div 7 = 20$</p>
+                        <p class="final-answer">Answer: $\textbf{20}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">19. $123 \times 11$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$123 \times 10 = 1230$</p>
+                        <p class="solution-step">$123 \times 1 = 123$</p>
+                        <p class="solution-step">$1230 + 123 = 1353$</p>
+                        <p class="final-answer">Answer: $\textbf{1353}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">20. $56.7 \div 9$</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$567 \div 9 = 63$</p>
+                        <p class="solution-step">Adjust for decimal.</p>
+                        <p class="final-answer">Answer: $\textbf{6.3}$</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Ensure KaTeX rendering happens after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMathInElement(document.body, {
+                // Configure KaTeX to recognize '$...$' for inline math
+                delimiters: [
+                    {left: "$$", right: "$$", display: true}, // Block math
+                    {left: "$", right: "$", display: false},   // Inline math
+                    {left: "\\(", right: "\\)", display: false}, // Inline math (standard LaTeX)
+                    {left: "\\[", right: "\\]", display: true}  // Block math (standard LaTeX)
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

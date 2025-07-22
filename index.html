@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHA-3001Y - Learning Enhancement</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background for the page */
+            color: #333;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* Scrubs green */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20.5px 20px;
+            box-sizing: border-box;
+        }
+        .navbar-title {
+            color: black; /* Changed to black */
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            flex-grow: 1;
+            text-align: center;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .topic-section {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .topic-link-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Space between topic links */
+        }
+        .topic-link {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #e9e9e9;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .topic-link:hover {
+            background-color: #dcdcdc;
+            transform: translateX(5px);
+        }
+        .topic-icon {
+            margin-right: 10px;
+            font-size: 1.5em; /* Adjust icon size */
+            color: #4CAF50; /* Green color for icons */
+        }
+        .topic-description {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+            margin-left: 35px; /* Align with text after icon */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .navbar-title {
+                margin-bottom: 10px;
+            }
+            .topic-section {
+                margin: 10px;
+                padding: 15px;
+            }
+            .topic-link {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .topic-icon {
+                margin-bottom: 5px;
+            }
+            .topic-description {
+                margin-left: 0;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="navbar-title">PHA-3001Y - Learning Enhancement</a>
+    </div>
+
+    <div class="topic-section">
+        <h2>Calculations Exercises</h2>
+        <p>Below you will find links to questions on individual topics.</p>
+
+        <div class="topic-link-container">
+            <a href="arithmetic/q.html" class="topic-link">
+                <i class="fas fa-calculator topic-icon"></i>
+                <div>
+                    <strong>Arithmetic Skills</strong>
+                    <div class="topic-description">Mathematical operations including addition, subtraction, multiplication, and division.</div>
+                </div>
+            </a>
+            <a href="fractions/q.html" class="topic-link">
+                <i class="fas fa-percent topic-icon"></i>
+                <div>
+                    <strong>Fractions and Percentages</strong>
+                    <div class="topic-description">Expressing numbers as fractions or percentages, and performing calculations involving them.</div>
+                </div>
+            </a>
+            <a href="converting/q.html" class="topic-link">
+                <i class="fas fa-exchange-alt topic-icon"></i>
+                <div>
+                    <strong>Converting Metric Units</strong>
+                    <div class="topic-description">Conversions between different metric units of measurement (e.g., mcg to g, g to mg, ml to L).</div>
+                </div>
+            </a>
+            <a href="molar/q.html" class="topic-link">
+                <i class="fas fa-atom topic-icon"></i>
+                <div>
+                    <strong>Molar Equations</strong>
+                    <div class="topic-description">Calculations involving molecular weights, molarity, and determining quantities in molar solutions.</div>
+                </div>
+            </a>
+            <a href="bsa/q.html" class="topic-link">
+                <i class="fas fa-ruler topic-icon"></i>
+                <div>
+                    <strong>Body Surface Area</strong>
+                    <div class="topic-description">Calculating Body Surface Area using height and weight.</div>
+                </div>
+            </a>
+            <a href="dilutions/q.html" class="topic-link">
+                <i class="fas fa-tint topic-icon"></i>
+                <div>
+                    <strong>Dilutions</strong>
+                    <div class="topic-description">Understanding and calculating changes in concentration when solutions are diluted.</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

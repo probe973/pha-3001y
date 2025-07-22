@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Skills</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" crossorigin="anonymous">
+    <!-- KaTeX JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <style>
+        /* Custom styles to match the provided index.html's aesthetic */
+        body {
+            font-family: sans-serif; /* Matching the sans-serif from index.html */
+            line-height: 1.6;
+            padding-top: 60px; /* Matching index.html's body padding for fixed header */
+            background-color: #f4f4f4; /* Light background from index.html */
+            color: #333;
+        }
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* Scrubs green from index.html */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center;
+            padding: 20.5px 20px; /* Matching padding from index.html */
+            box-sizing: border-box;
+        }
+        .navbar-title-custom {
+            color: black; /* Changed to black as per index.html */
+            font-size: 24px; /* Explicitly set to match index.html's title font size */
+            font-weight: bold; /* Added for consistency with index.html's title */
+            text-decoration: none;
+            flex-grow: 1; /* Allows title to take available space */
+            text-align: center;
+            padding: 0; /* Crucial: No extra padding on the title link itself */
+        }
+        .navbar-icon-link {
+            color: black;
+            font-size: 24px; /* Explicitly set icon size to match title and index.html's visual height */
+            border-radius: 9999px; /* Tailwind's rounded-full equivalent for hover effect */
+            transition: background-color 0.3s ease;
+            display: flex; /* To properly center the icon if it has its own padding/margin */
+            align-items: center;
+            justify-content: center;
+            height: 40px; /* Approximate height of the icon area to match title height */
+            width: 40px; /* Make it square for better click/tap target */
+        }
+        .navbar-icon-link:hover {
+            background-color: rgba(28, 100, 50, 0.2); /* Hover effect matching hover:bg-green-700 hover:bg-opacity-20 */
+        }
+
+        /* KaTeX specific styling */
+        .katex-display > .katex {
+            display: block;
+            text-align: center;
+        }
+        .katex {
+            font-size: 1.1em; /* Slightly larger font for equations */
+        }
+
+        /* Responsive adjustments for navbar */
+        @media (max-width: 600px) {
+            .navbar-custom {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .navbar-title-custom {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar-custom">
+        <a href="../index.html" class="navbar-icon-link" aria-label="Home" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <h1 class="navbar-title-custom">Arithmetic Skills</h1>
+        <a href="s.html" class="navbar-icon-link" aria-label="Solutions" title="Solutions">
+            <i class="fas fa-clipboard-check"></i>
+        </a>
+    </nav>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Instructions Box -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Instructions</h2>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                <li>Calculators of any description are not allowed.</li>
+                <li>All answers should be written to 2 decimal places (unless requested otherwise).</li>
+                <li>All answers must include units, where appropriate. Answers without units (or incorrect units) will be marked as incorrect.</li>
+                <li>If using scientific notation, use as a number between 1 & 10 e.g. $1.6 \times 10^3$</li>
+            </ul>
+        </section>
+
+        <!-- Questions Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Questions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Pure Arithmetic Questions (consistent style) -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">1. Calculate: $((22 \times 6) - 15) \div 3$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">2. Calculate: $((512 - 128) \times 2) \div 64$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">3. Calculate: $4500 \times 12$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">4. Calculate: $11.5 \times 8.3$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">5. Calculate: $3640 \div 52$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">6. Calculate: $14.7 \div 21$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">7. Calculate: $((50 + 70) \times 3) - 100$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">8. Calculate: $((250 - 75) \div 5) + 15$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">9. Calculate: $78 \times 23$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">10. Calculate: $15.8 \times 4.5$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">11. Calculate: $4800 \div 16$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">12. Calculate: $28.8 \div 12$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">13. Calculate: $((120 \div 4) + 15) \times 2$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">14. Calculate: $((9.6 + 2.4) \times 5) - 10$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">15. Calculate: $675 \div 25$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">16. Calculate: $3.5 \times 18$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">17. Calculate: $((720 - 180) \div 9) + 40$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">18. Calculate: $((15 \times 8) + 20) \div 7$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">19. Calculate: $123 \times 11$</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800">20. Calculate: $56.7 \div 9$</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Ensure KaTeX rendering happens after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMathInElement(document.body, {
+                // Configure KaTeX to recognize '$...$' for inline math
+                delimiters: [
+                    {left: "$$", right: "$$", display: true}, // Block math
+                    {left: "$", right: "$", display: false},   // Inline math
+                    {left: "\\(", right: "\\)", display: false}, // Inline math (standard LaTeX)
+                    {left: "\\[", right: "\\]", display: true}  // Block math (standard LaTeX)
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

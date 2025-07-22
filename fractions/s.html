@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractions and Percentages - Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" crossorigin="anonymous">
+    <!-- KaTeX JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <style>
+        /* Custom styles to match the provided index.html's aesthetic */
+        body {
+            font-family: sans-serif; /* Matching the sans-serif from index.html */
+            line-height: 1.6;
+            padding-top: 60px; /* Matching index.html's body padding for fixed header */
+            background-color: #f4f4f4; /* Light background from index.html */
+            color: #333;
+        }
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* Scrubs green from index.html */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center;
+            padding: 20.5px 20px; /* Matching padding from index.html */
+            box-sizing: border-box;
+        }
+        .navbar-title-custom {
+            color: black; /* Changed to black as per index.html */
+            font-size: 24px; /* Explicitly set to match index.html's title font size */
+            font-weight: bold; /* Added for consistency with index.html's title */
+            text-decoration: none;
+            flex-grow: 1; /* Allows title to take available space */
+            text-align: center;
+            padding: 0; /* Crucial: No extra padding on the title link itself */
+        }
+        .navbar-icon-link {
+            color: black;
+            font-size: 24px; /* Explicitly set icon size to match title and index.html's visual height */
+            border-radius: 9999px; /* Tailwind's rounded-full equivalent for hover effect */
+            transition: background-color 0.3s ease;
+            display: flex; /* To properly center the icon if it has its own padding/margin */
+            align-items: center;
+            justify-content: center;
+            height: 40px; /* Approximate height of the icon area to match title height */
+            width: 40px; /* Make it square for better click/tap target */
+        }
+        .navbar-icon-link:hover {
+            background-color: rgba(28, 100, 50, 0.2); /* Hover effect matching hover:bg-green-700 hover:bg-opacity-20 */
+        }
+
+        /* KaTeX specific styling */
+        .katex-display > .katex {
+            display: block;
+            text-align: center;
+        }
+        .katex {
+            font-size: 1.1em; /* Slightly larger font for equations */
+        }
+
+        /* Responsive adjustments for navbar */
+        @media (max-width: 600px) {
+            .navbar-custom {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .navbar-title-custom {
+                margin-bottom: 10px;
+            }
+        }
+        .solution-step {
+            margin-bottom: 0.5em; /* Space between steps */
+        }
+        .final-answer {
+            font-size: 1.25em; /* Larger font for final answer */
+            font-weight: bold; /* Bold text for final answer */
+            color: #1a202c; /* Darker color for emphasis */
+            margin-top: 0.75em; /* Space above final answer */
+            text-align: left; /* Align with steps */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar-custom">
+        <a href="../index.html" class="navbar-icon-link" aria-label="Home" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <h1 class="navbar-title-custom">Fractions and Percentages - Solutions</h1>
+        <a href="q.html" class="navbar-icon-link" aria-label="Questions" title="Questions">
+            <i class="fas fa-book"></i>
+        </a>
+    </nav>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Instructions/Information Box -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Solutions to Fractions and Percentages Questions</h2>
+            <p class="text-gray-700">
+                Below are the step-by-step solutions to the fractions and percentages questions.
+            </p>
+        </section>
+
+        <!-- Solutions Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Solutions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Solutions to Fractions and Percentages Questions -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">1. Express $0.62$ as a percentage.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$0.62 \times 100 = 62$</p>
+                        <p class="final-answer">Answer: $\textbf{62\%}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">2. Express $7.1$ as a fraction in its simplest form.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$7.1 = \frac{71}{10}$</p>
+                        <p class="final-answer">Answer: $\mathbf{\frac{71}{10}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">3. Express $450$ out of $3200$ as a percentage.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$(450 \div 3200) \times 100$</p>
+                        <p class="solution-step">$450 \div 3200 = 0.140625$</p>
+                        <p class="solution-step">$0.140625 \times 100 = 14.0625$</p>
+                        <p class="final-answer">Answer: $\textbf{14.06\%}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">4. If you were travelling at $65$ miles per hour and decreased $8\%$ how fast would you be travelling?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$8\%$ of $65$: $(8 \times 65) \div 100 = 5.2$</p>
+                        <p class="solution-step">$65 - 5.2 = 59.8$</p>
+                        <p class="final-answer">Answer: $\textbf{59.80 \text{mph}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">5. If your weekly wages were $£520$ and you received a $3\%$ pay increase, what would you earn each week (to the nearest $£1$)?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$3\%$ of $£520$: $(3 \times 520) \div 100 = 15.60$</p>
+                        <p class="solution-step">$£520 + £15.60 = £535.60$</p>
+                        <p class="final-answer">Answer: $\textbf{£536}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">6. If you had $300\text{g}$ of a cream which contained $7\%$ w/w active ingredient, how many grams of active ingredient would be present?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$7\%$ of $300\text{g}$: $(7 \times 300) \div 100 = 21$</p>
+                        <p class="final-answer">Answer: $\textbf{21\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">7. Express $0.15$ as a percentage.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$0.15 \times 100 = 15$</p>
+                        <p class="final-answer">Answer: $\textbf{15\%}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">8. Express $3.2$ as a fraction in its simplest form.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$3.2 = \frac{32}{10}$</p>
+                        <p class="solution-step">Simplify: $\frac{32 \div 2}{10 \div 2} = \frac{16}{5}$</p>
+                        <p class="final-answer">Answer: $\mathbf{\frac{16}{5}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">9. Express $150$ out of $1250$ as a percentage.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$(150 \div 1250) \times 100$</p>
+                        <p class="solution-step">$150 \div 1250 = 0.12$</p>
+                        <p class="solution-step">$0.12 \times 100 = 12$</p>
+                        <p class="final-answer">Answer: $\textbf{12\%}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">10. If a car's fuel efficiency of $45$ miles per gallon decreased by $6\%$, what is the new fuel efficiency?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$6\%$ of $45$: $(6 \times 45) \div 100 = 2.7$</p>
+                        <p class="solution-step">$45 - 2.7 = 42.3$</p>
+                        <p class="final-answer">Answer: $\textbf{42.30 \text{mpg}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">11. If a monthly bill was $£85$ and it increased by $5\%$, what would be the new monthly bill (to the nearest $£1$)?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$5\%$ of $£85$: $(5 \times 85) \div 100 = 4.25$</p>
+                        <p class="solution-step">$£85 + £4.25 = £89.25$</p>
+                        <p class="final-answer">Answer: $\textbf{£89}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">12. A solution contains $9\%$ active ingredient. How many milligrams would be in a $5\text{mL}$ dose?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Assume $1\text{mL}$ of solution weighs $1\text{g}$. So $5\text{mL} = 5\text{g}$.</p>
+                        <p class="solution-step">$5\text{g} = 5000\text{mg}$</p>
+                        <p class="solution-step">$9\%$ of $5000\text{mg}$: $(9 \times 5000) \div 100 = 450$</p>
+                        <p class="final-answer">Answer: $\textbf{450\text{mg}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">13. Express $0.009$ as a percentage.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$0.009 \times 100 = 0.9$</p>
+                        <p class="final-answer">Answer: $\textbf{0.9\%}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">14. Express $1.6$ as a fraction in its simplest form.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$1.6 = \frac{16}{10}$</p>
+                        <p class="solution-step">Simplify: $\frac{16 \div 2}{10 \div 2} = \frac{8}{5}$</p>
+                        <p class="final-answer">Answer: $\mathbf{\frac{8}{5}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">15. Express $210$ out of $1800$ as a percentage.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$(210 \div 1800) \times 100$</p>
+                        <p class="solution-step">$210 \div 1800 = 0.11666...$</p>
+                        <p class="solution-step">$0.11666... \times 100 = 11.666...$</p>
+                        <p class="final-answer">Answer: $\textbf{11.67\%}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">16. If a population of $12000$ increased by $7\%$, what is the new population?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$7\%$ of $12000$: $(7 \times 12000) \div 100 = 840$</p>
+                        <p class="solution-step">$12000 + 840 = 12840$</p>
+                        <p class="final-answer">Answer: $\textbf{12840}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">17. If your annual income was $£32000$ and you received a $2\%$ pay cut, what would your new annual income be (to the nearest $£1$)?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$2\%$ of $£32000$: $(2 \times 32000) \div 100 = 640$</p>
+                        <p class="solution-step">$£32000 - £640 = £31360$</p>
+                        <p class="final-answer">Answer: $\textbf{£31360}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">18. If you had $150\text{mL}$ of a liquid which contained $4\%$ v/v active ingredient, how many $\text{mL}$ of active ingredient would be present?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$4\%$ of $150\text{mL}$: $(4 \times 150) \div 100 = 6$</p>
+                        <p class="final-answer">Answer: $\textbf{6\text{mL}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">19. Express $550$ out of $4200$ as a percentage.</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$(550 \div 4200) \times 100$</p>
+                        <p class="solution-step">$550 \div 4200 = 0.13095...$</p>
+                        <p class="solution-step">$0.13095... \times 100 = 13.095...$</p>
+                        <p class="final-answer">Answer: $\textbf{13.10\%}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">20. If a quantity of $280\text{g}$ is decreased by $11\%$, what is the new quantity in $\text{g}$?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">$11\%$ of $280\text{g}$: $(11 \times 280) \div 100 = 30.8$</p>
+                        <p class="solution-step">$280 - 30.8 = 249.2$</p>
+                        <p class="final-answer">Answer: $\textbf{249.20\text{g}}$</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Ensure KaTeX rendering happens after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMathInElement(document.body, {
+                // Configure KaTeX to recognize '$...$' for inline math
+                delimiters: [
+                    {left: "$$", right: "$$", display: true}, // Block math
+                    {left: "$", right: "$", display: false},   // Inline math
+                    {left: "\\(", right: "\\)", display: false}, // Inline math (standard LaTeX)
+                    {left: "\\[", right: "\\]", display: true}  // Block math (standard LaTeX)
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Calculations 3001 Review - Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" crossorigin="anonymous">
+    <!-- KaTeX JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <style>
+        /* Custom styles to match the consistent aesthetic (neutral tones) */
+        body {
+            font-family: sans-serif; /* Consistent font */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background */
+            color: #333;
+        }
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* Scrubs green */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center;
+            padding: 20.5px 20px; /* Consistent padding */
+            box-sizing: border-box;
+        }
+        .navbar-title-custom {
+            color: black; /* Consistent black title */
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            flex-grow: 1;
+            text-align: center;
+            padding: 0;
+        }
+        .navbar-icon-link {
+            color: black;
+            font-size: 24px;
+            border-radius: 9999px; /* Rounded-full */
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 40px;
+        }
+        .navbar-icon-link:hover {
+            background-color: rgba(28, 100, 50, 0.2); /* Consistent hover effect */
+        }
+
+        /* Main content styling */
+        .content-section {
+            background-color: #ffffff; /* White background for sections */
+            padding: 1.5rem;
+            border-radius: 0.5rem; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+            margin-bottom: 2rem; /* Space between sections */
+        }
+        .info-box {
+            border-left: 4px solid #3b82f6; /* Blue left border for instructions/info */
+        }
+        h1, h2 {
+            color: #333;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        ol {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 0; /* Remove default padding */
+        }
+        ol li {
+            display: block;
+            margin-bottom: 1rem; /* Space between list items */
+            position: relative;
+            padding: 1rem 1rem 1rem 3rem; /* Padding for content and space for number */
+            background-color: #f9fafb; /* Light gray background for solution items */
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb; /* Light border */
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Very subtle shadow */
+        }
+        ol > li:before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            position: absolute;
+            left: 1rem; /* Position the number */
+            top: 1rem; /* Align with text */
+            font-weight: bold;
+            color: #333; /* Black/dark gray for numbers (matching Dilutions/Molar Equations) */
+            font-size: 1.1em;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e5e7eb; /* Light gray line */
+            margin: 2rem 0; /* Space around the separator */
+        }
+        /* Solution details box styling (neutral tones) */
+        .solution-details {
+            font-family: monospace; /* Monospace for solutions for clarity */
+            white-space: pre-wrap; /* Preserve whitespace and wrap */
+            word-break: break-all; /* Break long words */
+            background-color: #f0f4f8; /* Light blue-gray for solutions */
+            padding: 0.75rem;
+            border-radius: 0.25rem;
+            border: 1px solid #d9e2ec; /* Slightly darker border for solutions */
+            margin-top: 0.75rem; /* Space above solution details */
+            color: #2d3748; /* Darker text for solutions */
+            font-size: 0.95rem;
+        }
+        .solution-details strong {
+            color: #1a202c; /* Darker color for bold solution text */
+        }
+        /* Styling for nested unordered lists (sub-questions) */
+        ol li ul {
+            list-style-type: disc; /* Use discs for sub-items */
+            margin-top: 0.5rem;
+            margin-left: 2rem; /* Indent sub-list */
+            padding-left: 0;
+            color: #4b5563; /* Darker gray for list text */
+        }
+        ol li ul li {
+            background-color: transparent; /* No background for sub-list items */
+            border: none; /* No border for sub-list items */
+            box-shadow: none; /* No shadow for sub-list items */
+            padding: 0.25rem 0; /* Smaller padding for sub-list items */
+            margin-bottom: 0.25rem; /* Smaller margin for sub-list items */
+            position: static; /* Remove absolute positioning for sub-list markers */
+        }
+        ol li ul li:before {
+            content: none; /* Remove numbering for sub-list items */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar-custom">
+        <a href="../index.html" class="navbar-icon-link" aria-label="Home" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <h1 class="navbar-title-custom">Pharmacy Calculations 3001 Review - Solutions</h1>
+        <a href="q.html" class="navbar-icon-link" aria-label="Questions" title="Questions">
+            <i class="fas fa-book"></i>
+        </a>
+    </nav>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Standard Instructions Box -->
+        <section class="content-section info-box">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Instructions</h2>
+            <p class="text-gray-700">Below are the worked solutions for each question. Give answers correct to 2 decimal places when appropriate.</p>
+        </section>
+
+        <hr>
+
+        <!-- Numerical Skills Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Numerical Skills</h2>
+            <ol>
+                <li>
+                    Calculate $45 \times 24$
+                    <div class="solution-details">
+                        $45 \times 24 = 1080$
+                        <br><strong>Solution: 1080</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $1335 \times 64$
+                    <div class="solution-details">
+                        $1335 \times 64 = 85440$
+                        <br><strong>Solution: 85440</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $544 \times 1566$
+                    <div class="solution-details">
+                        $544 \times 1566 = 851904$
+                        <br><strong>Solution: 851904</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $88.2 \times 45$
+                    <div class="solution-details">
+                        $88.2 \times 45 = 3969$
+                        <br><strong>Solution: 3969</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $33.4 \times 6.2$
+                    <div class="solution-details">
+                        $33.4 \times 6.2 = 207.08$
+                        <br><strong>Solution: 207.08</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $7290 \div 15$
+                    <div class="solution-details">
+                        $7290 \div 15 = 486$
+                        <br><strong>Solution: 486</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $1139.4 \div 27$
+                    <div class="solution-details">
+                        $1139.4 \div 27 = 42.2$
+                        <br><strong>Solution: 42.20</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $28 \div 44$
+                    <div class="solution-details">
+                        $28 \div 44 \approx 0.6363...$
+                        <br><strong>Solution: 0.64</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $6.65 \div 36$
+                    <div class="solution-details">
+                        $6.65 \div 36 \approx 0.1847...$
+                        <br><strong>Solution: 0.18</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $(13 \times 4 + 23) \div 5$
+                    <div class="solution-details">
+                        $(13 \times 4 + 23) \div 5 = (52 + 23) \div 5 = 75 \div 5 = 15$
+                        <br><strong>Solution: 15</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $24 \times 6 - 36 \div 6$
+                    <div class="solution-details">
+                        $24 \times 6 - 36 \div 6 = 144 - 6 = 138$
+                        <br><strong>Solution: 138</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $18 + 2 \times 9 - 6 \div 3$
+                    <div class="solution-details">
+                        $18 + 2 \times 9 - 6 \div 3 = 18 + 18 - 2 = 36 - 2 = 34$
+                        <br><strong>Solution: 34</strong>
+                    </div>
+                </li>
+                <li>
+                    Calculate $18 + 2 \times 9 - 6 \div 3$
+                    <div class="solution-details">
+                        $18 + 2 \times 9 - 6 \div 3 = 18 + 18 - 2 = 36 - 2 = 34$
+                        <br><strong>Solution: 34</strong>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- Percentages and Fractions Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Percentages and Fractions</h2>
+            <p class="text-lg text-gray-800 mb-4">Express the following as percentages:</p>
+            <ol>
+                <li>
+                    $0.43$
+                    <div class="solution-details">
+                        $0.43 \times 100\% = 43\%$
+                        <br><strong>Solution: 43%</strong>
+                    </div>
+                </li>
+                <li>
+                    $0.05$
+                    <div class="solution-details">
+                        $0.05 \times 100\% = 5\%$
+                        <br><strong>Solution: 5%</strong>
+                    </div>
+                </li>
+                <li>
+                    $0.054$
+                    <div class="solution-details">
+                        $0.054 \times 100\% = 5.4\%$
+                        <br><strong>Solution: 5.4%</strong>
+                    </div>
+                </li>
+                <li>
+                    $1.56$
+                    <div class="solution-details">
+                        $1.56 \times 100\% = 156\%$
+                        <br><strong>Solution: 156%</strong>
+                    </div>
+                </li>
+                <li>
+                    $400$ out of $1000$
+                    <div class="solution-details">
+                        $\frac{400}{1000} \times 100\% = \frac{40}{100} \times 100\% = 40\%$
+                        <br><strong>Solution: 40%</strong>
+                    </div>
+                </li>
+                <li>
+                    $250$ out of $600$
+                    <div class="solution-details">
+                        $\frac{250}{600} \times 100\% = \frac{25}{60} \times 100\% = \frac{5}{12} \times 100\% \approx 41.666...\%$
+                        <br><strong>Solution: 41.67%</strong>
+                    </div>
+                </li>
+                <li>
+                    $88$ out of $900$
+                    <div class="solution-details">
+                        $\frac{88}{900} \times 100\% = \frac{88}{9}\% \approx 9.777...\%$
+                        <br><strong>Solution: 9.78%</strong>
+                    </div>
+                </li>
+            </ol>
+            <p class="text-lg text-gray-800 mb-4 mt-6">Express the following as fractions, in their simplest form:</p>
+            <ol start="8">
+                <li>
+                    $0.35$
+                    <div class="solution-details">
+                        $0.35 = \frac{35}{100} = \frac{7}{20}$
+                        <br><strong>Solution: $\mathbf{\frac{7}{20}}$</strong>
+                    </div>
+                </li>
+                <li>
+                    $0.45$
+                    <div class="solution-details">
+                        $0.45 = \frac{45}{100} = \frac{9}{20}$
+                        <br><strong>Solution: $\mathbf{\frac{9}{20}}$</strong>
+                    </div>
+                </li>
+                <li>
+                    $2.4$
+                    <div class="solution-details">
+                        $2.4 = \frac{24}{10} = \frac{12}{5}$
+                        <br><strong>Solution: $\mathbf{\frac{12}{5}}$</strong>
+                    </div>
+                </li>
+                <li>
+                    $65\%$
+                    <div class="solution-details">
+                        $65\% = \frac{65}{100} = \frac{13}{20}$
+                        <br><strong>Solution: $\mathbf{\frac{13}{20}}$</strong>
+                    </div>
+                </li>
+                <li>
+                    $62.5\%$
+                    <div class="solution-details">
+                        $62.5\% = \frac{62.5}{100} = \frac{125}{200} = \frac{5}{8}$
+                        <br><strong>Solution: $\mathbf{\frac{5}{8}}$</strong>
+                    </div>
+                </li>
+            </ol>
+            <p class="text-lg text-gray-800 mb-4 mt-6">Additional percentage problems:</p>
+            <ol start="13">
+                <li>
+                    If the price of a drug costs $£85$ per batch and increases in price by $5\%$, what is the new batch price?
+                    <div class="solution-details">
+                        Increase: $5\%\text{ of }£85 = \frac{5}{100} \times 85 = 4.25$
+                        New price: $£85 + £4.25 = £89.25$
+                        <br><strong>Solution: £89.25</strong>
+                    </div>
+                </li>
+                <li>
+                    The value of some science equipment has decreased by $4.6\%$ this year. The value was $£2500$, so what is it now?
+                    <div class="solution-details">
+                        Decrease: $4.6\%\text{ of }£2500 = \frac{4.6}{100} \times 2500 = 115$
+                        New value: $£2500 - £115 = £2385$
+                        <br><strong>Solution: £2385.00</strong>
+                    </div>
+                </li>
+                <li>
+                    A $145\text{cm}$ child has increased their height by $6\%$ over the year. What is their new height, to the nearest $\text{cm}$?
+                    <div class="solution-details">
+                        Increase: $6\%\text{ of }145\text{cm} = \frac{6}{100} \times 145 = 8.7\text{cm}$
+                        New height: $145\text{cm} + 8.7\text{cm} = 153.7\text{cm}$
+                        Rounded to nearest cm: $154\text{cm}$
+                        <br><strong>Solution: 154 cm</strong>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- Conversions Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Conversions</h2>
+            <p class="text-lg text-gray-800 mb-4">Convert the following into the given unit:</p>
+            <ol>
+                <li>
+                    $7.25\text{g}$ into $\text{mg}$
+                    <div class="solution-details">
+                        $1\text{g} = 1000\text{mg}$
+                        $7.25\text{g} \times 1000 = 7250\text{mg}$
+                        <br><strong>Solution: 7250 mg</strong>
+                    </div>
+                </li>
+                <li>
+                    $0.0444\text{mg}$ into $\text{mcg}$
+                    <div class="solution-details">
+                        $1\text{mg} = 1000\text{mcg}$
+                        $0.0444\text{mg} \times 1000 = 44.4\text{mcg}$
+                        <br><strong>Solution: 44.4 mcg</strong>
+                    </div>
+                </li>
+                <li>
+                    $93400\text{mL}$ into $\text{L}$
+                    <div class="solution-details">
+                        $1\text{L} = 1000\text{mL}$
+                        $93400\text{mL} \div 1000 = 93.4\text{L}$
+                        <br><strong>Solution: 93.4 L</strong>
+                    </div>
+                </li>
+                <li>
+                    $65000\text{ng}$ into $\text{mcg}$
+                    <div class="solution-details">
+                        $1\text{mcg} = 1000\text{ng}$
+                        $65000\text{ng} \div 1000 = 65\text{mcg}$
+                        <br><strong>Solution: 65 mcg</strong>
+                    </div>
+                </li>
+                <li>
+                    $0.000234\text{g}$ into $\text{mcg}$
+                    <div class="solution-details">
+                        $1\text{g} = 1,000,000\text{mcg}$
+                        $0.000234\text{g} \times 1,000,000 = 234\text{mcg}$
+                        <br><strong>Solution: 234 mcg</strong>
+                    </div>
+                </li>
+                <li>
+                    $250000\text{mg}$ into $\text{kg}$
+                    <div class="solution-details">
+                        $1\text{kg} = 1,000,000\text{mg}$
+                        $250000\text{mg} \div 1,000,000 = 0.25\text{kg}$
+                        <br><strong>Solution: 0.25 kg</strong>
+                    </div>
+                </li>
+                <li>
+                    $45\text{g}$ into $\text{ng}$
+                    <div class="solution-details">
+                        $1\text{g} = 1,000,000,000\text{ng} = 10^9\text{ng}$
+                        $45\text{g} \times 10^9 = 4.5 \times 10^{10}\text{ng}$
+                        <br><strong>Solution: $4.5 \times 10^{10}\text{ng}$</strong>
+                    </div>
+                </li>
+                <li>
+                    $123\text{mcg}$ into $\text{g}$
+                    <div class="solution-details">
+                        $1\text{g} = 1,000,000\text{mcg}$
+                        $123\text{mcg} \div 1,000,000 = 0.000123\text{g}$
+                        Or in scientific notation: $1.23 \times 10^{-4}\text{g}$
+                        <br><strong>Solution: 0.000123 g or $1.23 \times 10^{-4}\text{g}$</strong>
+                    </div>
+                </li>
+                <li>
+                    $4.6 \times 10^8 \text{mg}$ into $\text{g}$
+                    <div class="solution-details">
+                        $1\text{g} = 10^3\text{mg}$
+                        $(4.6 \times 10^8\text{mg}) \div 10^3 = 4.6 \times 10^{(8-3)}\text{g} = 4.6 \times 10^5\text{g}$
+                        <br><strong>Solution: $4.6 \times 10^5\text{g}$</strong>
+                    </div>
+                </li>
+                <li>
+                    $2.1 \times 10^{15} \text{mm}$ into $\text{km}$
+                    <div class="solution-details">
+                        $1\text{km} = 10^6\text{mm}$
+                        $(2.1 \times 10^{15}\text{mm}) \div 10^6 = 2.1 \times 10^{(15-6)}\text{km} = 2.1 \times 10^9\text{km}$
+                        <br><strong>Solution: $2.1 \times 10^9\text{km}$</strong>
+                    </div>
+                </li>
+                <li>
+                    $5.77 \times 10^{-5} \text{L}$ into $\text{mL}$
+                    <div class="solution-details">
+                        $1\text{L} = 10^3\text{mL}$
+                        $(5.77 \times 10^{-5}\text{L}) \times 10^3 = 5.77 \times 10^{(-5+3)}\text{mL} = 5.77 \times 10^{-2}\text{mL}$
+                        <br><strong>Solution: $5.77 \times 10^{-2}\text{mL}$</strong>
+                    </div>
+                </li>
+                <li>
+                    $25000\text{mm}^2$ into $\text{m}^2$
+                    <div class="solution-details">
+                        $1\text{m} = 1000\text{mm} = 10^3\text{mm}$
+                        $1\text{m}^2 = (10^3\text{mm})^2 = 10^6\text{mm}^2$
+                        $25000\text{mm}^2 \div 10^6 = 25000 \times 10^{-6}\text{m}^2 = 2.5 \times 10^4 \times 10^{-6}\text{m}^2 = 2.5 \times 10^{-2}\text{m}^2$
+                        Or as a decimal: $0.025\text{m}^2$
+                        <br><strong>Solution: $2.5 \times 10^{-2}\text{m}^2$ or 0.025$\text{m}^2$</strong>
+                    </div>
+                </li>
+                <li>
+                    $60\text{m}^2$ into $\text{cm}^2$
+                    <div class="solution-details">
+                        $1\text{m} = 100\text{cm} = 10^2\text{cm}$
+                        $1\text{m}^2 = (10^2\text{cm})^2 = 10^4\text{cm}^2$
+                        $60\text{m}^2 \times 10^4 = 6 \times 10^1 \times 10^4\text{cm}^2 = 6 \times 10^5\text{cm}^2$
+                        Or as a number: $600000\text{cm}^2$
+                        <br><strong>Solution: $6 \times 10^5\text{cm}^2$ or 600000$\text{cm}^2$</strong>
+                    </div>
+                </li>
+                <li>
+                    $2.7 \times 10^{12} \text{m}^2$ into $\text{km}^2$
+                    <div class="solution-details">
+                        $1\text{km} = 1000\text{m} = 10^3\text{m}$
+                        $1\text{km}^2 = (10^3\text{m})^2 = 10^6\text{m}^2$
+                        $(2.7 \times 10^{12}\text{m}^2) \div 10^6 = 2.7 \times 10^{(12-6)}\text{km}^2 = 2.7 \times 10^6\text{km}^2$
+                        <br><strong>Solution: $2.7 \times 10^6\text{km}^2$</strong>
+                    </div>
+                </li>
+                <li>
+                    $4 \times 10^9 \text{mm}^3$ into $\text{m}^3$
+                    <div class="solution-details">
+                        $1\text{m} = 1000\text{mm} = 10^3\text{mm}$
+                        $1\text{m}^3 = (10^3\text{mm})^3 = 10^9\text{mm}^3$
+                        $(4 \times 10^9\text{mm}^3) \div 10^9 = 4 \times 10^{(9-9)}\text{m}^3 = 4 \times 10^0\text{m}^3 = 4\text{m}^3$
+                        <br><strong>Solution: 4$\text{m}^3$</strong>
+                    </div>
+                </li>
+                <li>
+                    $5.1 \times 10^{-5} \text{km}^3$ into $\text{mm}^3$
+                    <div class="solution-details">
+                        $1\text{km} = 10^6\text{mm}$
+                        $1\text{km}^3 = (10^6\text{mm})^3 = 10^{18}\text{mm}^3$
+                        $(5.1 \times 10^{-5}\text{km}^3) \times 10^{18} = 5.1 \times 10^{(-5+18)}\text{mm}^3 = 5.1 \times 10^{13}\text{mm}^3$
+                        <br><strong>Solution: $5.1 \times 10^{13}\text{mm}^3$</strong>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- Further Pharmacy Calculations Section -->
+        <section class="content-section">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Further Pharmacy Calculations</h2>
+            <ol>
+                <li>
+                    If you had $250\text{g}$ of a $18\%$ w/w cream, how many grams of active ingredient would be present?
+                    <div class="solution-details">
+                        $18\%$ w/w means $18\text{g}$ of active ingredient per $100\text{g}$ of cream.
+                        Amount of active ingredient = $\frac{18}{100} \times 250\text{g} = 45\text{g}$
+                        <br><strong>Solution: 45 g</strong>
+                    </div>
+                </li>
+                <li>
+                    If you had $600\text{mL}$ of a $6\%$ w/v solution, how many grams of active ingredient would be present?
+                    <div class="solution-details">
+                        $6\%$ w/v means $6\text{g}$ of active ingredient per $100\text{mL}$ of solution.
+                        Amount of active ingredient = $\frac{6}{100} \times 600\text{mL} = 36\text{g}$
+                        <br><strong>Solution: 36 g</strong>
+                    </div>
+                </li>
+                <li>
+                    If you had $12\text{mL}$ of a $4\%$ w/v solution, how many milligrams of active ingredient would be present?
+                    <div class="solution-details">
+                        $4\%$ w/v means $4\text{g}$ of active ingredient per $100\text{mL}$ of solution.
+                        Amount of active ingredient in $12\text{mL}$:
+                        $(4\text{g} \div 100\text{mL}) \times 12\text{mL} = 0.04\text{g/mL} \times 12\text{mL} = 0.48\text{g}$
+                        Convert to milligrams: $0.48\text{g} \times 1000\text{mg/g} = 480\text{mg}$
+                        <br><strong>Solution: 480 mg</strong>
+                    </div>
+                </li>
+                <li>
+                    If you had $10\text{g}$ of a $2.5\%$ w/w cream, how many milligrams of active ingredient would be present?
+                    <div class="solution-details">
+                        $2.5\%$ w/w means $2.5\text{g}$ of active ingredient per $100\text{g}$ of cream.
+                        Amount of active ingredient = $\frac{2.5}{100} \times 10\text{g} = 0.25\text{g}$
+                        Convert to milligrams: $0.25\text{g} \times 1000\text{mg/g} = 250\text{mg}$
+                        <br><strong>Solution: 250 mg</strong>
+                    </div>
+                </li>
+                <li>
+                    How many grams of sucrose (MW = $342$) are required to produce $200$ millilitres of a $2$ molar solution?
+                    <div class="solution-details">
+                        Molarity (M) = Moles (mol) / Volume (L)
+                        Volume in Litres: $200\text{mL} \div 1000 = 0.2\text{L}$
+                        Moles required = Molarity $\times$ Volume (L) = $2\text{mol/L} \times 0.2\text{L} = 0.4\text{mol}$
+                        Grams required = Moles $\times$ Molecular Weight = $0.4\text{mol} \times 342\text{g/mol} = 136.8\text{g}$
+                        <br><strong>Solution: 136.80 g</strong>
+                    </div>
+                </li>
+                <li>
+                    How many grams of glucose (MW = $180.2$) are required to produce $450$ millilitres of a $5$ molar solution?
+                    <div class="solution-details">
+                        Volume in Litres: $450\text{mL} \div 1000 = 0.45\text{L}$
+                        Moles required = Molarity $\times$ Volume (L) = $5\text{mol/L} \times 0.45\text{L} = 2.25\text{mol}$
+                        Grams required = Moles $\times$ Molecular Weight = $2.25\text{mol} \times 180.2\text{g/mol} = 405.45\text{g}$
+                        <br><strong>Solution: 405.45 g</strong>
+                    </div>
+                </li>
+                <li>
+                    A solution is $4\%$ w/v. $500\text{mL}$ of water is added to $1500\text{mL}$ of this solution. What is the resulting strength, expressed as $\%$ w/v?
+                    <div class="solution-details">
+                        Initial concentration: $4\%$ w/v means $4\text{g}$ per $100\text{mL}$.
+                        Amount of solute in $1500\text{mL}$: $(4\text{g} \div 100\text{mL}) \times 1500\text{mL} = 60\text{g}$
+                        New total volume: $1500\text{mL} + 500\text{mL} = 2000\text{mL}$
+                        New concentration: $(60\text{g} \div 2000\text{mL}) \times 100\% = 3\%$ w/v
+                        <br><strong>Solution: 3.00% w/v</strong>
+                    </div>
+                </li>
+                <li>
+                    A solution contains $80\text{mg}$ of solute per $\text{mL}$ of solution. $200\text{mL}$ of this solution is diluted by adding $300\text{mL}$ of water. What is the resulting strength, expressed as $\%$ w/v?
+                    <div class="solution-details">
+                        Initial amount of solute in $200\text{mL}$: $80\text{mg/mL} \times 200\text{mL} = 16000\text{mg}$
+                        Convert to grams: $16000\text{mg} \div 1000 = 16\text{g}$
+                        New total volume: $200\text{mL} + 300\text{mL} = 500\text{mL}$
+                        New concentration: $(16\text{g} \div 500\text{mL}) \times 100\% = 3.2\%$ w/v
+                        <br><strong>Solution: 3.20% w/v</strong>
+                    </div>
+                </li>
+                <li>
+                    A solution contains $2.5\text{g}$ of solute per $100\text{mL}$ of solution. $500\text{mL}$ of this solution is diluted by adding $300\text{mL}$ of water. What is the resulting strength, expressed as:
+                    <ul>
+                        <li>$\text{mg/mL}$</li>
+                        <li>$\%$ w/v</li>
+                    </ul>
+                    <div class="solution-details">
+                        Initial amount of solute in $500\text{mL}$: $(2.5\text{g} \div 100\text{mL}) \times 500\text{mL} = 12.5\text{g}$
+                        New total volume: $500\text{mL} + 300\text{mL} = 800\text{mL}$
+
+                        For $\text{mg/mL}$:
+                        $12.5\text{g} = 12500\text{mg}$
+                        Concentration = $12500\text{mg} \div 800\text{mL} = 15.625\text{mg/mL}$
+                        <br><strong>Solution (mg/mL): 15.63 mg/mL</strong>
+
+                        For $\%$ w/v:
+                        Concentration = $(12.5\text{g} \div 800\text{mL}) \times 100\% = 1.5625\%$ w/v
+                        <br><strong>Solution (% w/v): 1.56% w/v</strong>
+                    </div>
+                </li>
+                <li>
+                    The body mass index (BMI) is calculated using the formula: $\text{BMI} = \frac{\text{Mass}(\text{Kg})}{(\text{Height}(\text{m}))^2}$<br>Calculate the BMI of the following patients:
+                    <ul>
+                        <li>Mass = $70\text{kg}$, height = $2\text{m}$</li>
+                        <li>Mass = $49\text{kg}$, height = $140\text{cm}$</li>
+                        <li>Mass = $51.2\text{kg}$, height = $160\text{cm}$</li>
+                    </ul>
+                    <div class="solution-details">
+                        For Mass = $70\text{kg}$, height = $2\text{m}$:
+                        $\text{BMI} = \frac{70\text{kg}}{(2\text{m})^2} = \frac{70}{4}\text{kg/m}^2 = 17.5\text{kg/m}^2$
+                        <br><strong>Solution: 17.50 kg/m$^2$</strong>
+
+                        For Mass = $49\text{kg}$, height = $140\text{cm}$:
+                        Convert height to m: $140\text{cm} = 1.4\text{m}$
+                        $\text{BMI} = \frac{49\text{kg}}{(1.4\text{m})^2} = \frac{49}{1.96}\text{kg/m}^2 = 25\text{kg/m}^2$
+                        <br><strong>Solution: 25.00 kg/m$^2$</strong>
+
+                        For Mass = $51.2\text{kg}$, height = $160\text{cm}$:
+                        Convert height to m: $160\text{cm} = 1.6\text{m}$
+                        $\text{BMI} = \frac{51.2\text{kg}}{(1.6\text{m})^2} = \frac{51.2}{2.56}\text{kg/m}^2 = 20\text{kg/m}^2$
+                        <br><strong>Solution: 20.00 kg/m$^2$</strong>
+                    </div>
+                </li>
+                <li>
+                    The body surface area (BSA) is calculated using the formula: $\text{BSA} = \sqrt{\frac{\text{Height}(\text{cm}) \times \text{Mass}(\text{kg})}{3600}} \text{ (m}^2\text{)}$<br>Find the BSA of the following patients:
+                    <ul>
+                        <li>Mass = $60\text{kg}$, height = $1.8\text{m}$</li>
+                        <li>Mass = $80\text{kg}$, height = $180\text{cm}$</li>
+                        <li>Mass = $150\text{kg}$, height = $192\text{cm}$</li>
+                    </ul>
+                    You can use $\sqrt{2} = 1.41$ and $\sqrt{3} = 1.73$
+                    <div class="solution-details">
+                        For Mass = $60\text{kg}$, height = $1.8\text{m}$:
+                        Convert height to cm: $1.8\text{m} = 180\text{cm}$
+                        $\text{BSA} = \sqrt{\frac{180\text{cm} \times 60\text{kg}}{3600}} = \sqrt{\frac{10800}{3600}} = \sqrt{3}\text{m}^2$
+                        Using $\sqrt{3} = 1.73$:
+                        $\text{BSA} = 1.73\text{m}^2$
+                        <br><strong>Solution: 1.73 m$^2$</strong>
+
+                        For Mass = $80\text{kg}$, height = $180\text{cm}$:
+                        $\text{BSA} = \sqrt{\frac{180\text{cm} \times 80\text{kg}}{3600}} = \sqrt{\frac{14400}{3600}} = \sqrt{4}\text{m}^2 = 2\text{m}^2$
+                        <br><strong>Solution: 2.00 m$^2$</strong>
+
+                        For Mass = $150\text{kg}$, height = $192\text{cm}$:
+                        $\text{BSA} = \sqrt{\frac{192\text{cm} \times 150\text{kg}}{3600}} = \sqrt{\frac{28800}{3600}} = \sqrt{8}\text{m}^2$
+                        $\sqrt{8} = \sqrt{4 \times 2} = 2\sqrt{2}$
+                        Using $\sqrt{2} = 1.41$:
+                        $\text{BSA} = 2 \times 1.41 = 2.82\text{m}^2$
+                        <br><strong>Solution: 2.82 m$^2$</strong>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <hr>
+    </main>
+
+    <script>
+        // Ensure KaTeX rendering happens after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "\\(", right: "\\)", display: false},
+                    {left: "\\[", right: "\\]", display: true}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

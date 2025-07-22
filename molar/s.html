@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molar Equations - Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" crossorigin="anonymous">
+    <!-- KaTeX JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <style>
+        /* Custom styles to match the provided index.html's aesthetic */
+        body {
+            font-family: sans-serif; /* Matching the sans-serif from index.html */
+            line-height: 1.6;
+            padding-top: 60px; /* Matching index.html's body padding for fixed header */
+            background-color: #f4f4f4; /* Light background from index.html */
+            color: #333;
+        }
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* Scrubs green from index.html */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center;
+            padding: 20.5px 20px; /* Matching padding from index.html */
+            box-sizing: border-box;
+        }
+        .navbar-title-custom {
+            color: black; /* Changed to black as per index.html */
+            font-size: 24px; /* Explicitly set to match index.html's title font size */
+            font-weight: bold; /* Added for consistency with index.html's title */
+            text-decoration: none;
+            flex-grow: 1; /* Allows title to take available space */
+            text-align: center;
+            padding: 0; /* Crucial: No extra padding on the title link itself */
+        }
+        .navbar-icon-link {
+            color: black;
+            font-size: 24px; /* Explicitly set icon size to match title and index.html's visual height */
+            border-radius: 9999px; /* Tailwind's rounded-full equivalent for hover effect */
+            transition: background-color 0.3s ease;
+            display: flex; /* To properly center the icon if it has its own padding/margin */
+            align-items: center;
+            justify-content: center;
+            height: 40px; /* Approximate height of the icon area to match title height */
+            width: 40px; /* Make it square for better click/tap target */
+        }
+        .navbar-icon-link:hover {
+            background-color: rgba(28, 100, 50, 0.2); /* Hover effect matching hover:bg-green-700 hover:bg-opacity-20 */
+        }
+
+        /* KaTeX specific styling */
+        .katex-display > .katex {
+            display: block;
+            text-align: center;
+        }
+        .katex {
+            font-size: 1.1em; /* Slightly larger font for equations */
+        }
+
+        /* Responsive adjustments for navbar */
+        @media (max-width: 600px) {
+            .navbar-custom {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .navbar-title-custom {
+                margin-bottom: 10px;
+            }
+        }
+        .solution-step {
+            margin-bottom: 0.5em; /* Space between steps */
+        }
+        .final-answer {
+            font-size: 1.25em; /* Larger font for final answer */
+            font-weight: bold; /* Bold text for final answer */
+            color: #1a202c; /* Darker color for emphasis */
+            margin-top: 0.75em; /* Space above final answer */
+            text-align: left; /* Align with steps */
+        }
+        /* Single column layout for solutions too */
+        .solutions-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* Space between solution items */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar-custom">
+        <a href="../index.html" class="navbar-icon-link" aria-label="Home" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <h1 class="navbar-title-custom">Molar Equations - Solutions</h1>
+        <a href="q.html" class="navbar-icon-link" aria-label="Questions" title="Questions">
+            <i class="fas fa-book"></i>
+        </a>
+    </nav>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Instructions/Information Box -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Solutions to Molar Equations Questions</h2>
+            <p class="text-gray-700">
+                Below are the step-by-step solutions for molar equation problems.
+            </p>
+        </section>
+
+        <!-- Solutions Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Solutions</h2>
+            <div class="solutions-grid">
+                <!-- Solutions to Molar Equations Questions -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">1. How many grams of potassium chloride (molecular weight = $74.5$) are required to produce $500$ millilitres of a $3$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $500\text{mL} \div 1000 = 0.5\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $3\text{mol/L} \times 0.5\text{L} = 1.5\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $1.5\text{mol} \times 74.5\text{g/mol} = 111.75\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{111.75\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">2. How many grams of glucose (molecular weight = $180$) are required to produce $250$ millilitres of a $0.5$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $250\text{mL} \div 1000 = 0.25\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $0.5\text{mol/L} \times 0.25\text{L} = 0.125\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $0.125\text{mol} \times 180\text{g/mol} = 22.5\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{22.50\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">3. How many grams of sodium hydroxide (molecular weight = $40.0$) are required to produce $1000$ millilitres of a $3$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $1000\text{mL} \div 1000 = 1.0\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $3\text{mol/L} \times 1.0\text{L} = 3.0\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $3.0\text{mol} \times 40.0\text{g/mol} = 120.0\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{120.00\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">4. How many grams of calcium chloride (molecular weight = $111$) are required to produce $750$ millilitres of a $0.2$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $750\text{mL} \div 1000 = 0.75\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $0.2\text{mol/L} \times 0.75\text{L} = 0.15\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $0.15\text{mol} \times 111\text{g/mol} = 16.65\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{16.65\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">5. How many grams of urea (molecular weight = $60.1$) are required to produce $400$ millilitres of a $2$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $400\text{mL} \div 1000 = 0.4\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $2\text{mol/L} \times 0.4\text{L} = 0.8\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $0.8\text{mol} \times 60.1\text{g/mol} = 48.08\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{48.08\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">6. How many grams of magnesium sulfate (molecular weight = $120$) are required to produce $800$ millilitres of a $0.1$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $800\text{mL} \div 1000 = 0.8\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $0.1\text{mol/L} \times 0.8\text{L} = 0.08\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $0.08\text{mol} \times 120\text{g/mol} = 9.6\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{9.60\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">7. How many grams of sucrose (molecular weight = $342$) are required to produce $150$ millilitres of a $0.8$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $150\text{mL} \div 1000 = 0.15\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $0.8\text{mol/L} \times 0.15\text{L} = 0.12\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $0.12\text{mol} \times 342\text{g/mol} = 41.04\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{41.04\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">8. How many grams of lithium bromide (molecular weight = $86.8$) are required to produce $600$ millilitres of a $1$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $600\text{mL} \div 1000 = 0.6\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $1\text{mol/L} \times 0.6\text{L} = 0.6\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $0.6\text{mol} \times 86.8\text{g/mol} = 52.08\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{52.08\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">9. How many grams of ammonium nitrate (molecular weight = $80.0$) are required to produce $300$ millilitres of a $2$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $300\text{mL} \div 1000 = 0.3\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $2\text{mol/L} \times 0.3\text{L} = 0.6\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $0.6\text{mol} \times 80.0\text{g/mol} = 48.0\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{48.00\text{g}}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">10. How many grams of acetic acid (molecular weight = $60.1$) are required to produce $900$ millilitres of a $0.4$ molar solution?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Volume in Litres: $900\text{mL} \div 1000 = 0.9\text{L}$</p>
+                        <p class="solution-step">Moles required: Molarity $\times$ Volume (L) = $0.4\text{mol/L} \times 0.9\text{L} = 0.36\text{mol}$</p>
+                        <p class="solution-step">Grams required: Moles $\times$ Molecular Weight = $0.36\text{mol} \times 60.1\text{g/mol} = 21.636\text{g}$</p>
+                        <p class="final-answer">Answer: $\textbf{21.64\text{g}}$</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Ensure KaTeX rendering happens after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMathInElement(document.body, {
+                // Configure KaTeX to recognize '$...$' for inline math
+                delimiters: [
+                    {left: "$$", right: "$$", display: true}, // Block math
+                    {left: "$", right: "$", display: false},   // Inline math
+                    {left: "\\(", right: "\\)", display: false}, // Inline math (standard LaTeX)
+                    {left: "\\[", right: "\\]", display: true}  // Block math (standard LaTeX)
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

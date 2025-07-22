@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" crossorigin="anonymous">
+    <!-- KaTeX JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <style>
+        /* Custom styles to match the provided index.html's aesthetic */
+        body {
+            font-family: sans-serif; /* Matching the sans-serif from index.html */
+            line-height: 1.6;
+            padding-top: 60px; /* Matching index.html's body padding for fixed header */
+            background-color: #f4f4f4; /* Light background from index.html */
+            color: #333;
+        }
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* Scrubs green from index.html */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center;
+            padding: 20.5px 20px; /* Matching padding from index.html */
+            box-sizing: border-box;
+        }
+        .navbar-title-custom {
+            color: black; /* Changed to black as per index.html */
+            font-size: 24px; /* Explicitly set to match index.html's title font size */
+            font-weight: bold; /* Added for consistency with index.html's title */
+            text-decoration: none;
+            flex-grow: 1; /* Allows title to take available space */
+            text-align: center;
+            padding: 0; /* Crucial: No extra padding on the title link itself */
+        }
+        .navbar-icon-link {
+            color: black;
+            font-size: 24px; /* Explicitly set icon size to match title and index.html's visual height */
+            border-radius: 9999px; /* Tailwind's rounded-full equivalent for hover effect */
+            transition: background-color 0.3s ease;
+            display: flex; /* To properly center the icon if it has its own padding/margin */
+            align-items: center;
+            justify-content: center;
+            height: 40px; /* Approximate height of the icon area to match title height */
+            width: 40px; /* Make it square for better click/tap target */
+        }
+        .navbar-icon-link:hover {
+            background-color: rgba(28, 100, 50, 0.2); /* Hover effect matching hover:bg-green-700 hover:bg-opacity-20 */
+        }
+
+        /* KaTeX specific styling */
+        .katex-display > .katex {
+            display: block;
+            text-align: center;
+        }
+        .katex {
+            font-size: 1.1em; /* Slightly larger font for equations */
+        }
+
+        /* Responsive adjustments for navbar */
+        @media (max-width: 600px) {
+            .navbar-custom {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .navbar-title-custom {
+                margin-bottom: 10px;
+            }
+        }
+        /* New custom style for single column layout spacing */
+        .question-item {
+            margin-bottom: 1.5rem; /* Adds space between questions in a single column */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar-custom">
+        <a href="../index.html" class="navbar-icon-link" aria-label="Home" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <h1 class="navbar-title-custom">Dilutions</h1>
+        <a href="s.html" class="navbar-icon-link" aria-label="Solutions" title="Solutions">
+            <i class="fas fa-clipboard-check"></i>
+        </a>
+    </nav>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Instructions Box -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Instructions</h2>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                <li>Calculators of any description are not allowed.</li>
+                <li>All answers should be written to 2 decimal places (unless requested otherwise).</li>
+                <li>All answers must include units, where appropriate. Answers without units (or incorrect units) will be marked as incorrect.</li>
+                <li>If using scientific notation, use as a number between 1 & 10 e.g. $1.6 \times 10^3$</li>
+            </ul>
+        </section>
+
+        <!-- Questions Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Questions</h2>
+            <div class="flex flex-col"> <!-- Changed to flex-col for single column -->
+                <!-- Dilutions Questions -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">1. A solution contains $10\text{g}$ of solute per $100\text{mL}$ of solution. $200\text{mL}$ of this solution is diluted by adding a further $300\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">2. A solution contains $5\text{g}$ of solute per $50\text{mL}$ of solution. $100\text{mL}$ of this solution is diluted by adding a further $150\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">3. A solution contains $12\text{g}$ of solute per $200\text{mL}$ of solution. $400\text{mL}$ of this solution is diluted by adding a further $200\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">4. A solution contains $15\text{g}$ of solute per $150\text{mL}$ of solution. $300\text{mL}$ of this solution is diluted by adding a further $600\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">5. A solution contains $6\text{g}$ of solute per $100\text{mL}$ of solution. $500\text{mL}$ of this solution is diluted by adding a further $100\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">6. A solution contains $20\text{g}$ of solute per $200\text{mL}$ of solution. $200\text{mL}$ of this solution is diluted by adding a further $800\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">7. A solution contains $9\text{g}$ of solute per $100\text{mL}$ of solution. $300\text{mL}$ of this solution is diluted by adding a further $300\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">8. A solution contains $7\text{g}$ of solute per $50\text{mL}$ of solution. $250\text{mL}$ of this solution is diluted by adding a further $250\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">9. A solution contains $10\text{g}$ of solute per $200\text{mL}$ of solution. $600\text{mL}$ of this solution is diluted by adding a further $200\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200 question-item">
+                    <p class="text-lg text-gray-800">10. A solution contains $18\text{g}$ of solute per $100\text{mL}$ of solution. $100\text{mL}$ of this solution is diluted by adding a further $50\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Ensure KaTeX rendering happens after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMathInElement(document.body, {
+                // Configure KaTeX to recognize '$...$' for inline math
+                delimiters: [
+                    {left: "$$", right: "$$", display: true}, // Block math
+                    {left: "$", right: "$", display: false},   // Inline math
+                    {left: "\\(", right: "\\)", display: false}, // Inline math (standard LaTeX)
+                    {left: "\\[", right: "\\]", display: true}  // Block math (standard LaTeX)
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

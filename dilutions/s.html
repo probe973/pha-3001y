@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilutions - Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" crossorigin="anonymous">
+    <!-- KaTeX JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <style>
+        /* Custom styles to match the provided index.html's aesthetic */
+        body {
+            font-family: sans-serif; /* Matching the sans-serif from index.html */
+            line-height: 1.6;
+            padding-top: 60px; /* Matching index.html's body padding for fixed header */
+            background-color: #f4f4f4; /* Light background from index.html */
+            color: #333;
+        }
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* Scrubs green from index.html */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center;
+            padding: 20.5px 20px; /* Matching padding from index.html */
+            box-sizing: border-box;
+        }
+        .navbar-title-custom {
+            color: black; /* Changed to black as per index.html */
+            font-size: 24px; /* Explicitly set to match index.html's title font size */
+            font-weight: bold; /* Added for consistency with index.html's title */
+            text-decoration: none;
+            flex-grow: 1; /* Allows title to take available space */
+            text-align: center;
+            padding: 0; /* Crucial: No extra padding on the title link itself */
+        }
+        .navbar-icon-link {
+            color: black;
+            font-size: 24px; /* Explicitly set icon size to match title and index.html's visual height */
+            border-radius: 9999px; /* Tailwind's rounded-full equivalent for hover effect */
+            transition: background-color 0.3s ease;
+            display: flex; /* To properly center the icon if it has its own padding/margin */
+            align-items: center;
+            justify-content: center;
+            height: 40px; /* Approximate height of the icon area to match title height */
+            width: 40px; /* Make it square for better click/tap target */
+        }
+        .navbar-icon-link:hover {
+            background-color: rgba(28, 100, 50, 0.2); /* Hover effect matching hover:bg-green-700 hover:bg-opacity-20 */
+        }
+
+        /* KaTeX specific styling */
+        .katex-display > .katex {
+            display: block;
+            text-align: center;
+        }
+        .katex {
+            font-size: 1.1em; /* Slightly larger font for equations */
+        }
+
+        /* Responsive adjustments for navbar */
+        @media (max-width: 600px) {
+            .navbar-custom {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .navbar-title-custom {
+                margin-bottom: 10px;
+            }
+        }
+        .solution-step {
+            margin-bottom: 0.5em; /* Space between steps */
+        }
+        .final-answer {
+            font-size: 1.25em; /* Larger font for final answer */
+            font-weight: bold; /* Bold text for final answer */
+            color: #1a202c; /* Darker color for emphasis */
+            margin-top: 0.75em; /* Space above final answer */
+            text-align: left; /* Align with steps */
+        }
+        /* Single column layout for solutions too */
+        .solutions-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* Space between solution items */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar-custom">
+        <a href="../index.html" class="navbar-icon-link" aria-label="Home" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <h1 class="navbar-title-custom">Dilutions - Solutions</h1>
+        <a href="q.html" class="navbar-icon-link" aria-label="Questions" title="Questions">
+            <i class="fas fa-book"></i>
+        </a>
+    </nav>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Instructions/Information Box -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Solutions to Dilutions Questions</h2>
+            <p class="text-gray-700">
+                Below are the step-by-step solutions for dilution problems.
+            </p>
+        </section>
+
+        <!-- Solutions Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Solutions</h2>
+            <div class="solutions-grid">
+                <!-- Solutions to Dilutions Questions -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">1. A solution contains $10\text{g}$ of solute per $100\text{mL}$ of solution. $200\text{mL}$ of this solution is diluted by adding a further $300\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(10\text{g} \div 100\text{mL}) \times 100\% = 10\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $200\text{mL}$: $10\%\text{ of }200\text{mL} = (10 \div 100) \times 200\text{mL} = 20\text{g}$</p>
+                        <p class="solution-step">New total volume: $200\text{mL} + 300\text{mL} = 500\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(20\text{g} \div 500\text{mL}) \times 100\% = 4\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{4.00\% w/v}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">2. A solution contains $5\text{g}$ of solute per $50\text{mL}$ of solution. $100\text{mL}$ of this solution is diluted by adding a further $150\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(5\text{g} \div 50\text{mL}) \times 100\% = 10\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $100\text{mL}$: $10\%\text{ of }100\text{mL} = (10 \div 100) \times 100\text{mL} = 10\text{g}$</p>
+                        <p class="solution-step">New total volume: $100\text{mL} + 150\text{mL} = 250\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(10\text{g} \div 250\text{mL}) \times 100\% = 4\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{4.00\% w/v}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">3. A solution contains $12\text{g}$ of solute per $200\text{mL}$ of solution. $400\text{mL}$ of this solution is diluted by adding a further $200\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(12\text{g} \div 200\text{mL}) \times 100\% = 6\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $400\text{mL}$: $6\%\text{ of }400\text{mL} = (6 \div 100) \times 400\text{mL} = 24\text{g}$</p>
+                        <p class="solution-step">New total volume: $400\text{mL} + 200\text{mL} = 600\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(24\text{g} \div 600\text{mL}) \times 100\% = 4\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{4.00\% w/v}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">4. A solution contains $15\text{g}$ of solute per $150\text{mL}$ of solution. $300\text{mL}$ of this solution is diluted by adding a further $600\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(15\text{g} \div 150\text{mL}) \times 100\% = 10\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $300\text{mL}$: $10\%\text{ of }300\text{mL} = (10 \div 100) \times 300\text{mL} = 30\text{g}$</p>
+                        <p class="solution-step">New total volume: $300\text{mL} + 600\text{mL} = 900\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(30\text{g} \div 900\text{mL}) \times 100\% = 3.333...\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{3.33\% w/v}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">5. A solution contains $6\text{g}$ of solute per $100\text{mL}$ of solution. $500\text{mL}$ of this solution is diluted by adding a further $100\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(6\text{g} \div 100\text{mL}) \times 100\% = 6\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $500\text{mL}$: $6\%\text{ of }500\text{mL} = (6 \div 100) \times 500\text{mL} = 30\text{g}$</p>
+                        <p class="solution-step">New total volume: $500\text{mL} + 100\text{mL} = 600\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(30\text{g} \div 600\text{mL}) \times 100\% = 5\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{5.00\% w/v}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">6. A solution contains $20\text{g}$ of solute per $200\text{mL}$ of solution. $200\text{mL}$ of this solution is diluted by adding a further $800\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(20\text{g} \div 200\text{mL}) \times 100\% = 10\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $200\text{mL}$: $10\%\text{ of }200\text{mL} = (10 \div 100) \times 200\text{mL} = 20\text{g}$</p>
+                        <p class="solution-step">New total volume: $200\text{mL} + 800\text{mL} = 1000\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(20\text{g} \div 1000\text{mL}) \times 100\% = 2\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{2.00\% w/v}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">7. A solution contains $9\text{g}$ of solute per $100\text{mL}$ of solution. $300\text{mL}$ of this solution is diluted by adding a further $300\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(9\text{g} \div 100\text{mL}) \times 100\% = 9\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $300\text{mL}$: $9\%\text{ of }300\text{mL} = (9 \div 100) \times 300\text{mL} = 27\text{g}$</p>
+                        <p class="solution-step">New total volume: $300\text{mL} + 300\text{mL} = 600\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(27\text{g} \div 600\text{mL}) \times 100\% = 4.5\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{4.50\% w/v}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">8. A solution contains $7\text{g}$ of solute per $50\text{mL}$ of solution. $250\text{mL}$ of this solution is diluted by adding a further $250\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(7\text{g} \div 50\text{mL}) \times 100\% = 14\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $250\text{mL}$: $14\%\text{ of }250\text{mL} = (14 \div 100) \times 250\text{mL} = 35\text{g}$</p>
+                        <p class="solution-step">New total volume: $250\text{mL} + 250\text{mL} = 500\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(35\text{g} \div 500\text{mL}) \times 100\% = 7\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{7.00\% w/v}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">9. A solution contains $10\text{g}$ of solute per $200\text{mL}$ of solution. $600\text{mL}$ of this solution is diluted by adding a further $200\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(10\text{g} \div 200\text{mL}) \times 100\% = 5\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $600\text{mL}$: $5\%\text{ of }600\text{mL} = (5 \div 100) \times 600\text{mL} = 30\text{g}$</p>
+                        <p class="solution-step">New total volume: $600\text{mL} + 200\text{mL} = 800\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(30\text{g} \div 800\text{mL}) \times 100\% = 3.75\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{3.75\% w/v}$</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm border border-gray-200">
+                    <p class="text-lg text-gray-800 mb-2">10. A solution contains $18\text{g}$ of solute per $100\text{mL}$ of solution. $100\text{mL}$ of this solution is diluted by adding a further $50\text{mL}$ of water. What is the resulting percentage strength of the new solution expressed as $\%$ w/v?</p>
+                    <div class="text-base text-gray-700 pl-4">
+                        <p class="solution-step">Initial concentration: $(18\text{g} \div 100\text{mL}) \times 100\% = 18\%$ w/v</p>
+                        <p class="solution-step">Amount of solute in $100\text{mL}$: $18\%\text{ of }100\text{mL} = (18 \div 100) \times 100\text{mL} = 18\text{g}$</p>
+                        <p class="solution-step">New total volume: $100\text{mL} + 50\text{mL} = 150\text{mL}$</p>
+                        <p class="solution-step">New concentration: $(18\text{g} \div 150\text{mL}) \times 100\% = 12\%$ w/v</p>
+                        <p class="final-answer">Answer: $\textbf{12.00\% w/v}$</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Ensure KaTeX rendering happens after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMathInElement(document.body, {
+                // Configure KaTeX to recognize '$...$' for inline math
+                delimiters: [
+                    {left: "$$", right: "$$", display: true}, // Block math
+                    {left: "$", right: "$", display: false},   // Inline math
+                    {left: "\\(", right: "\\)", display: false}, // Inline math (standard LaTeX)
+                    {left: "\\[", right: "\\]", display: true}  // Block math (standard LaTeX)
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
